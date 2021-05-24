@@ -66,11 +66,11 @@ configure_file( mad.h.in "${MAD_H}" )
 
 foreach( header ${EXPORTED_HEADERS} )
    file( READ ${header} HEADER_DATA )
-   file( APPEND ${MAD_H} "// #include \"${header}\"\n\n${HEADER_DATA}\n" )
+   string( REPLACE "# include" "// # include" HEADER_DATA_REPLACED "${HEADER_DATA}")
+   file( APPEND ${MAD_H} "// \"${header}\"\n\n${HEADER_DATA_REPLACED}\n" )
 endforeach()
 
-file( APPEND ${MAD_H} "#endif\n" )
-
+file( APPEND ${MAD_H} "# ifdef __cplusplus\n}\n# endif\n#endif\n" )
 
 install(TARGETS ${TARGET})
 install(FILES ${MAD_H} DESTINATION TYPE INCLUDE)

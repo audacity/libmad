@@ -20,4 +20,6 @@
 #ifndef _MAD_H_
 #define _MAD_H_
 
-
+# ifdef __cplusplus
+extern "C" {
+# endif
