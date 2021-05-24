@@ -56,6 +56,7 @@ target_compile_definitions( ${TARGET}
 target_compile_options( ${TARGET} 
    PRIVATE
       $<$<C_COMPILER_ID:AppleClang,Clang,GNU>:-Wall>
+      $<$<C_COMPILER_ID:AppleClang,Clang,GNU>:-Wno-implicit-function-declaration>
       $<$<C_COMPILER_ID:AppleClang,Clang,GNU>:-fPIC>
 )
 
