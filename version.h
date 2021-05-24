@@ -24,7 +24,7 @@
 
 # define MAD_VERSION_MAJOR	0
 # define MAD_VERSION_MINOR	15
-# define MAD_VERSION_PATCH	1
+# define MAD_VERSION_PATCH	2
 # define MAD_VERSION_EXTRA	" (beta)"
 
 # define MAD_VERSION_STRINGIZE(str)	#str
