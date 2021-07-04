@@ -20,7 +20,7 @@
 #ifndef _DETECT_FPM_H_
 #define _DETECT_FPM_H_
 
-#if defined(__amd64__) || defined(__x86_64__) || defined(_M_X64) || defined(__arm64__) || defined(__aarch64__) || defined(__ppc64__) || defined(__mips64)
+#if defined(__amd64__) || defined(__x86_64__) || defined(_M_X64) || defined(__arm64__) || defined(__aarch64__) || defined(__ppc64__) || defined(__mips64) || defined(_M_ARM64)
 #   define FPM_64BIT
 #elif defined(__i386__) || defined(i386) || defined(_M_IX86) || defined(_X86_) || defined(__THW_INTEL)
 #   define FPM_INTEL
