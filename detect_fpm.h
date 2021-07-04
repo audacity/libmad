@@ -28,7 +28,7 @@
 #   define FPM_ARM
 #elif defined(__PPC__) || defined(__powerpc__) || defined(__powerpc) || defined(___M_PPC)
 #   define FPM_PPC
-#elif (defined(mips) || defined(__mips__) || defined(MIPS) || defined(_MIPS_)
+#elif defined(mips) || defined(__mips__) || defined(MIPS) || defined(_MIPS_)
 #   define FPM_MIPS
 #else
 #   define FPM_DEFAULT
